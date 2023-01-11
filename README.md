@@ -1,5 +1,5 @@
 # docker2rootless
-'''
+```bash
 ####### BEGIN USEFULL CODE ########
 image=
 
@@ -23,7 +23,7 @@ podman rmi -f ${image}
 podman build -t ${image} . |tee /tmp/${image}.build
 podman login ${REGISTRY_FQDN_DST} &&\
 podman push ${image} ${REGISTRY_FQDN_DST}/${image}
-'''
+```
 OPENAI comment
 
 Ce code semble être un script pour construire et pousser une image Docker. Le script commence par installer les paquets "podman" et "podman-docker" en utilisant apt ou yum, selon le système sur lequel il est en cours d'exécution. Il démarre ensuite le service "podman.socket".
